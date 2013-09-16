@@ -300,8 +300,8 @@ var Player = new Class({
 		
 		this.audio = new Audio();
 		this.addAudioEvents();
-		this.audio.grab(new Element('source', {src: 'https://s3.amazonaws.com/hundred-waters/albums/hundred-waters/' + track.path_mp3, type: 'audio/mp3'}));		
-		this.audio.grab(new Element('source', {src: 'https://s3.amazonaws.com/hundred-waters/albums/hundred-waters/' + track.path_ogg, type: 'audio/ogg'}));		
+		this.audio.grab(new Element('source', {src: 'https://s3.amazonaws.com/hundred-waters/albums/' + track.path_mp3, type: 'audio/mp3'}));		
+		this.audio.grab(new Element('source', {src: 'https://s3.amazonaws.com/hundred-waters/albums/' + track.path_ogg, type: 'audio/ogg'}));		
 		this.trackName.setProperty('html', track.title);
 		this.trackLyrics.setProperty('html', track.lyrics);		
 		this.trackSlider.set(0);
