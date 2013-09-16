@@ -1,0 +1,97 @@
+html,body,img,p,h1,h2,h3,h4,h5,h6,label,div,a{padding:0;margin:0;}
+div,h1,h2,h3,h4,h5,h6,img,p,label,input,textarea,nav{float:left;}
+a,img{border:0;}
+a{text-decoration:none;}
+p a{float:none;}
+
+#player{
+	position:fixed;
+	bottom:0;
+	width:100%;
+	background:#000;
+}
+
+#player-wrapper{
+	position:relative;
+	float:none;
+	width:800px;
+	height:28px;
+	padding:13px 0;
+	margin:0 auto;
+}
+
+#player-volume{
+	width:15px;
+	height:13px;
+	background:url(../images/player_buttons.png) 0 0;
+	cursor:pointer;
+}
+
+#player-volume:hover{
+	background-position:0 -25px;
+}
+
+#player-volume.muted{
+	background-position:-25px 0;
+}
+
+#player-volume.muted:hover{
+	background-position:-25px -25px;
+}
+
+#player-play{
+	width:42px;
+	height:9px;
+	background:url(../images/player_buttons.png) -100px 0;
+	cursor:pointer;
+}
+
+#player-play:hover{
+	background-position:-100px -25px;
+}
+
+#player-play.paused{
+	background-position:-50px 0px;
+}
+
+#player-play.paused:hover{
+	background-position:-50px -25px;
+}
+
+#player-trackname{
+	margin-bottom:6px;
+	color:#fff;
+	text-transform:uppercase;
+}
+
+#player-bar-wrapper{
+	padding:3px 25px;
+	border-left:1px solid #e1e1e1;
+	border-right:1px solid #e1e1e1;	
+}
+
+#player-bar{
+	width:400px;
+	height:7px;
+	background:#e1e1e1;
+	overflow:hidden;
+}
+
+#player-barframe{
+	position:relative;
+	left:-400px;
+	width:410px;
+	height:7px;
+}
+
+#player-bar-bg{	
+	width:388px;
+	height:7px;
+	background:url(../images/bg_playbar.png);
+}
+
+#player-bar-edge{
+	width:22px;
+	height:7px;
+	background:url(../images/bg_playbar_edge.png);
+}
