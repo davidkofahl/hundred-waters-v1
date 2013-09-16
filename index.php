@@ -80,7 +80,7 @@
 				</div>	
 						
 							<div id="sm">	
-								<a id="shows-button" class="shows-button" href="http://www.hundred-waters.com#shows" target="_blank"></a>
+								<a id="shows-button" class="shows-button" href="http://www.hundred-waters.com/shows" target="_blank"></a>
 								
 										<a id="share" class="sm-button" href="http://www.facebook.com/100waters" target="_blank"></a>		
 							<a id="tweet" class="sm-button" href="http://twitter.com/100waters" target="_blank"></a>		
