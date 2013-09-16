@@ -1,11 +1,14 @@
 <?	$tracks = array();
 
- $services = getenv("VCAP_SERVICES");
- $services_json = json_decode($services,true);
- $mysql_config = $services_json["mysql-5.1"][0]["credentials"]; 
 
-	mysql_connect( $mysql_config["hostname"], $mysql_config["user"], $mysql_config["password"] );
-  mysql_select_db($mysql_config["name"]);
+  $url=parse_url(getenv("CLEARDB_DATABASE_URL"));
+  $host = $url["host"];
+  $username = $url["user"];
+  $password = $url["pass"];
+  $db = substr($url["path"],1);
+
+	mysql_connect( $host, $username, $password );
+  mysql_select_db($db);
 
 	$result = mysql_query('select * from tracks where album="hundred-waters" order by sort asc');	while ($track = mysql_fetch_assoc($result)){		$tracks[] = $track;		}
 	mysql_close();
@@ -20,7 +23,6 @@
 	<meta property="og:title" content="Hundred Waters Music" />
 	<meta property="og:type" content="musician" />
 	<meta property="og:url" content="http://hundredwatersmusic.elestialsound.com" />
-	<meta property="og:image" content="http://elestialsound.com/wp-content/uploads/2012/02/Hwaters.cover_.wspine-300x270.jpg" />
 	<meta property="og:site_name" content="Hundred Waters" />
 	<meta property="og:description" content="Hundred Waters was woven together under the spell of a viscous Floridian summer, from a home on its own in the woods amidst a city. The album was composed, recorded, torn apart, reshaped, spat on, shined, and tucked in at their Gainesville home through a method of remote collaboration and thoughtful solitude, reconvening at the helm to gather their threads into rope, and pull"/>
 	<meta property="fb:admins" content="2008866" />
