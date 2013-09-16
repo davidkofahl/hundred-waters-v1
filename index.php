@@ -10,7 +10,7 @@
 	mysql_connect( $host, $username, $password );
   mysql_select_db($db);
 
-	$result = mysql_query('select * from tracks where album="hundred-waters" order by sort asc');	while ($track = mysql_fetch_assoc($result)){		$tracks[] = $track;		}
+	$result = mysql_query('select * from tracks where album_id=1 order by sort asc');	while ($track = mysql_fetch_assoc($result)){		$tracks[] = $track;		}
 	mysql_close();
 	function get_tracks($tracks){		$out = '';		foreach ($tracks as $track) {			$out .= "<a href='#{$track['uri']}' id='id-{$track['uri']}' tabindex='-1' rel='{$track['sort']}'>{$track['title']}</a>";		}
 		return $out;	}
